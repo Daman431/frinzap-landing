@@ -2,3 +2,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-modal .mat-dialog-content{
+    height: 5vh;
+}
+.custom-modal{
+    height: 20vh;
+    text-align: center;
+}

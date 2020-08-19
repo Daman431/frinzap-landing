@@ -1,22 +1,27 @@
 .card-container{
     max-width: 75vw;
     box-shadow: gray 0px 0px 20px 10px;
-    height: 75vh;
+    height: auto;
+    width: auto;
     display: flex;
+  }
+  .heading{
+    font-weight: 900;
+    color: rgb(85, 83, 83);
   }
 .custom-input{
   border-radius: 50px;
   border: gray 1px solid;
   outline: gray;
-  padding-left: 0.5em;
-  height: 5vh;
+  padding-left: 0.75em;
+  height: 4vh;
 }
 .message-box{
   display: inline;
 }
 .logo{
-  height: 7vh;
-  width: 7vw;
+  height: 8vh;
+  width: 8vw;
 }
 .header-image{
   height: 100%;
@@ -38,4 +43,32 @@
   outline: none;
   background-color: rgb(243,114,1);
   color: #fff;
+}
+.counter-div{
+  height: 15%;
+  width: 15%;
+  background-color: rgb(243,114,1);
+  border-radius: 100%;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  color: #000;
+  padding: 0.5em;
+}
+.counter-header{
+  color: #fff;
+  font-size: small;
+  font-weight: 500;
+}
+.counter-text{
+  font-size: x-large;
+  color: #fff;
+  font-weight: 600;
+}
+.custom-error-message{
+  height: 5vh;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  border-radius: 10px 10px 100% 100%;
 }

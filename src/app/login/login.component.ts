@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'notify-dialog',
-  templateUrl: 'notify-dialog.html',
+  templateUrl: 'notify-dialog.html'
 })
 export class notifyDialog {}
 
@@ -27,9 +27,15 @@ export class LoginComponent implements OnInit {
       })
 
   }
+  log(x){
+    console.log(x);
+  }
 
   openDialog() {
-    this.dialog.open(notifyDialog);
+    let dialogConfig: MatDialogConfig = {
+      panelClass: "custom-modal"
+    };
+    this.dialog.open(notifyDialog, dialogConfig);
   }
 
   ngOnInit(): void {
