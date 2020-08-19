@@ -19,32 +19,34 @@
             </P>
          </div>
          <div class="notify-form">
-            <form>
-                <div class="form-group" style="display: flex;">
-                    <div class="col-5">                       
-                        <input type="text" class="form-control custom-input" id="name" placeholder="Name">
-                    </div>
-                    <div class="col-5">                       
-                        <input type="text" class="form-control custom-input" id="phone" placeholder="Phone No.">
-                    </div>
-                </div>
+            <form #f="ngForm" (ngSubmit)="formData(f)">
                 <div class="form-group">
-                    <div class="col-10">                       
-                        <input type="text" class="form-control custom-input" id="email" placeholder="Email">
+                    <div style="display: flex;">
+                        <div class="col-5">                       
+                            <input ngModel name="username" type="text" class="form-control custom-input" id="username" placeholder="Name">
+                        </div>
+                        <div class="col-5">                       
+                            <input ngModel name="phone" type="text" class="form-control custom-input" id="phone" placeholder="Phone No.">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-10">                       
+                            <input ngModel name="email" #email="ngModel"  type="text" class="form-control custom-input" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-12" style="display: flex;">
+                        <p>I am a</p>
+                        <mat-radio-group ngModel name="userType" aria-label="Select an option">
+                            <mat-radio-button value="student">Student</mat-radio-button>
+                            <mat-radio-button value="educator">Educator</mat-radio-button>
+                            <mat-radio-button value="institution">Institution</mat-radio-button>
+                        </mat-radio-group>
                     </div>
                 </div>
-                <div class="form-group col-12" style="display: flex;">
-                    <p>I am a</p>
-                    <mat-radio-group aria-label="Select an option">
-                        <mat-radio-button value="student">Student</mat-radio-button>
-                        <mat-radio-button value="educator">Educator</mat-radio-button>
-                        <mat-radio-button value="institution">Institution</mat-radio-button>
-                      </mat-radio-group>
+                <div class="col">
+                  <button mat-button class="notify-button" (click)="openDialog()">Notify Me</button>
                 </div>
-              </form>   
-              <div class="col">
-                <button mat-button class="notify-button" (click)="openDialog()">Notify Me</button>
-              </div>
+            </form>   
         </div>
     </div>
     <div class="header-image-container">

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Input } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { LoginComponent,notifyDialog } from './login/login.component';
 import { LoginCountdownComponent } from './login-countdown/login-countdown.component';
@@ -11,6 +10,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+
 
 
 
@@ -28,7 +30,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatToolbarModule,
     MatFormFieldModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
