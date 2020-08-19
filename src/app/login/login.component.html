@@ -4,7 +4,7 @@
             <img src="../../assets/images/logo.png" class="logo" >
          </mat-card-title>
          <mat-card-subtitle>
-             <p>Countdown-component!</p>
+             <!-- <p>Countdown-component!</p> -->
          </mat-card-subtitle>
          <div class="heading">
                 <h1>
@@ -18,7 +18,7 @@
                 have access to new age knowledge-sharing and networking.
             </P>
          </div>
-         <div class="norify-form">
+         <div class="notify-form">
             <form>
                 <div class="form-group" style="display: flex;">
                     <div class="col-5">                       
@@ -33,7 +33,7 @@
                         <input type="text" class="form-control custom-input" id="email" placeholder="Email">
                     </div>
                 </div>
-                <div class="form-group col-12">
+                <div class="form-group col-12" style="display: flex;">
                     <p>I am a</p>
                     <mat-radio-group aria-label="Select an option">
                         <mat-radio-button value="student">Student</mat-radio-button>
@@ -41,11 +41,9 @@
                         <mat-radio-button value="institution">Institution</mat-radio-button>
                       </mat-radio-group>
                 </div>
-              </form>
+              </form>   
               <div class="col">
-                  <button mat-button  class="notify-button">
-                    Notify me
-                  </button>
+                <button mat-button class="notify-button" (click)="openDialog()">Notify Me</button>
               </div>
         </div>
     </div>
