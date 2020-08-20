@@ -7,6 +7,9 @@
     width: 100vw;
     overflow: scroll;
   }
+  .counter-header{
+    font-size: 70%;
+  }
 }
 .card-container{
     max-width: 75vw;
@@ -58,11 +61,10 @@
   display: inline-block;
   text-align: center;
   color: #000;
-  /* padding: 0.5em;  */
 }
 .counter-header{
   color: #fff;
-  font-size: small;
+  font-size: ;
   font-weight: 500;
 }
 .counter-text{

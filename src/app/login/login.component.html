@@ -7,19 +7,19 @@
              <mat-card-subtitle>
                  <div class="counter-container">
                      <div class="counter-div ml-3">
-                        <p class="counter-text " >{{counterDetails.days}}</p>
+                        <p class="counter-text" >{{counterDetails.days}}</p>
                         <p class="counter-header">DAYS</p>
                      </div>
                      <div class="counter-div ml-3">
-                        <p class="counter-text ">{{counterDetails.hoursLeft}}</p>
+                        <p class="counter-text">{{counterDetails.hoursLeft}}</p>
                         <p class="counter-header">HOURS</p>
                      </div>
                      <div class="counter-div ml-3">
-                        <p class="counter-text ">{{counterDetails.minutesLeft}}</p>
+                        <p class="counter-text">{{counterDetails.minutesLeft}}</p>
                         <p class="counter-header">MINUTES</p>
                      </div>
                      <div class="counter-div ml-3">
-                        <p class="counter-text ">{{counterDetails.secondsLeft}}</p>
+                        <p class="counter-text">{{counterDetails.secondsLeft}}</p>
                         <p class="counter-header">SECONDS</p>
                      </div>
                  </div>
@@ -41,7 +41,7 @@
                 <form #f="ngForm" (ngSubmit)="formData(f); f.resetForm()">
                     <div class="form-group">
                         <div class="row d-block d-lg-flex">
-                            <div class="col mt-1">                       
+                            <div class="col mt-2">                       
                                 <input required ngModel name="username" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="username" placeholder="Name">
                                 <div class="alert alert-danger custom-error-message" *ngIf="!name.valid && name.touched">
                                     Name is required
