@@ -16,6 +16,12 @@ export class notifyDialog {}
 })
 export class LoginComponent implements OnInit {
   private url="192.241.131.118:5009/frinzap/invite";
+  public counterDetails = {
+    days:0,
+    hoursLeft:0,
+    minutesLeft:0,
+    secondsLeft:0
+  };
   constructor(public dialog: MatDialog,private http: HttpClient) { }
 
   formData(formObject){
@@ -39,8 +45,61 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.countdownComponent()
   }
 
+   countdownComponent() {
+        
+        let flag = true;
+        const updateCountdown = (countDownTime)=>{
+            const counter = setInterval(() => {
+                
+                this.counterDetails = updateDeadline();
+
+                if(countDownTime == 0){
+                    clearInterval(counter);
+                }
+            }, 1000);
+        }
+
+        const updateDeadline = ()=> {
+
+            let endDate = new Date("september 5, 2020 00:00:00");
+            let currentDate = new Date();
+            let countDownTime = endDate.getTime() - currentDate.getTime();
+
+            const remainingTime = timeLeft(countDownTime);
+
+            if(flag){
+                updateCountdown(countDownTime)
+                flag=false;
+            }
+
+            return remainingTime;
+
+        }
+        const timeLeft = (countDownTime) => {
+
+            let days = Math.floor(countDownTime/(1000 * 60 * 60 * 24));
+            let hours = Math.floor(countDownTime/(1000 * 60 *60));
+            let minutes = Math.floor(countDownTime/(1000 * 60));
+            let seconds = Math.floor(countDownTime/1000);
+
+
+
+            let hoursLeft = hours % 24;
+            let minutesLeft = minutes % 60;
+            let secondsLeft = seconds % 60;
+
+            return {
+                days:days,
+                hoursLeft:hoursLeft,
+                minutesLeft:minutesLeft,
+                secondsLeft:secondsLeft
+            }
+        }
+        updateDeadline();
+      }
 }
 
 
