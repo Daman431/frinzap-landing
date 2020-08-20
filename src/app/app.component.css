@@ -2,10 +2,10 @@
     height: 100vh;
 }
 .blog-button{
- border: 2px solid rgb(243,114,1);
+ border: 2px solid #f37021;
  border-radius: 50px;
  outline: none;
- color: rgb(243,114,1);
+ color: #f37021;
  width: 6vw;
 }
 .flex-center {

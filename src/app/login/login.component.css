@@ -1,4 +1,4 @@
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1000px){
   .card-container{
     min-width: 100vw;
     max-height: 100vh;
@@ -7,9 +7,21 @@
     width: 100vw;
     overflow: scroll;
   }
-  .counter-header{
-    font-size: 70%;
+  .counter-div{
+    height: 0;
+    width: 18%;
+    padding-bottom: 18%;
+    background-color: #f37021;
+    border-radius: 50%;
+    font-size: 1vh;
+    color: black;
   }
+  .custom-error-message{
+    padding: 0 !important ;
+  }
+  .custom-input{
+    height: 5vh !important ;
+  } 
 }
 .card-container{
     max-width: 75vw;
@@ -23,18 +35,22 @@
   }
 .custom-input{
   border-radius: 50px;
-  border: gray 1px solid;
+  border: gray 1.5px solid;
   outline: gray;
   padding-left: 0.75em;
-  height: 4vh;
+  height: 3.5vh;
   font-size: 0.75rem ;
   width: 100%;
 }
-
-.logo{
-  height: 6rem;
-  width: 8rem;
+.custom-input-field-container{
+  padding: 0;
 }
+.custom-input-container{
+  width: 70%;
+}
+
+
+
 .header-image{
   height: 100%;
   width: 100%;
@@ -48,14 +64,18 @@
 .notify-button{
   border-radius: 50px;
   outline: none;
-  background-color: rgb(243,114,1);
+  background-color: #f37021;
   color: #fff;
+}
+.counter-container{
+  padding: 0;
+  margin-top: 4vh;
 }
 .counter-div{
   height: 0;
-  width: 20%;
-  padding-bottom: 20%;
-  background-color: rgb(243,114,1);
+  width: 19%;
+  padding-bottom: 19%;
+  background-color: #f37021;
   border-radius: 50%;
   border: 1px solid #fff;
   display: inline-block;
@@ -64,13 +84,13 @@
 }
 .counter-header{
   color: #fff;
-  font-size: ;
-  font-weight: 500;
+  font-size: 1.3vh;
+  font-weight: 900;
 }
 .counter-text{
-  font-size: x-large;
+  font-size: xx-large;
   color: #fff;
-  margin-top: 25%;
+  margin: 25% 0 0 0;
   font-weight: 900;
 }
 .custom-error-message{
@@ -79,4 +99,25 @@
   font-size: 0.65rem;
   text-align: center;
   border-radius: 10px 10px 100% 100%;
+}
+.main-content{
+  padding: 5%;
+}
+
+.message-box{
+  font-size: 1rem;
+  font-family: ' Gilroy-Extrabold', sans-serif !important;
+  font-weight: 400;
+}
+.heading-container{
+  font-family: 'PT Sans', sans-serif;
+}
+.logo-container{
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+}
+.logo{
+  height: 35%;
+  width: 35%;
 }

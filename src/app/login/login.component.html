@@ -1,30 +1,28 @@
 <mat-card class="card-container">
     <div class="row row-cols-md-2 d-lg-flex d-block px-3">
-        <div class="main-content mt-2">
-            <mat-card-title>
+        <div class="main-content">
+            <div class="logo-container">
                 <img src="../../assets/images/logo.png" class="logo" >
-             </mat-card-title>
-             <mat-card-subtitle>
-                 <div class="counter-container">
-                     <div class="counter-div ml-3">
-                        <p class="counter-text" >{{counterDetails.days}}</p>
-                        <p class="counter-header">DAYS</p>
-                     </div>
-                     <div class="counter-div ml-3">
-                        <p class="counter-text">{{counterDetails.hoursLeft}}</p>
-                        <p class="counter-header">HOURS</p>
-                     </div>
-                     <div class="counter-div ml-3">
-                        <p class="counter-text">{{counterDetails.minutesLeft}}</p>
-                        <p class="counter-header">MINUTES</p>
-                     </div>
-                     <div class="counter-div ml-3">
-                        <p class="counter-text">{{counterDetails.secondsLeft}}</p>
-                        <p class="counter-header">SECONDS</p>
-                     </div>
-                 </div>
-             </mat-card-subtitle>
-             <div class="heading-container">
+            </div>
+            <div class="counter-container">
+                <div class="counter-div ml-3">
+                   <p class="counter-text" >{{counterDetails.days}}</p>
+                   <p class="counter-header">DAYS</p>
+                </div>
+                <div class="counter-div ml-3">
+                   <p class="counter-text">{{counterDetails.hoursLeft}}</p>
+                   <p class="counter-header">HOURS</p>
+                </div>
+                <div class="counter-div ml-3">
+                   <p class="counter-text">{{counterDetails.minutesLeft}}</p>
+                   <p class="counter-header">MINUTES</p>
+                </div>
+                <div class="counter-div ml-3">
+                   <p class="counter-text">{{counterDetails.secondsLeft}}</p>
+                   <p class="counter-header">SECONDS</p>
+                </div>
+            </div>
+             <div class="heading-container mt-3">
                     <h1 class="heading">
                         A REVOLUTION IS COMING!
                     </h1>
@@ -35,44 +33,45 @@
                     Our mission is to enable educators and students across the globe to
                     have access to new age knowledge-sharing and networking.
                 </P>
-                <p style="color: rgb(243,114,1) ;">Stay updated</p>
+                <p style="color: #f37021 ; font-weight: 400;">Stay updated</p>
              </div>
              <div class="notify-form container-fluid">
                 <form #f="ngForm" (ngSubmit)="formData(f); f.resetForm()">
                     <div class="form-group">
-                        <div class="row d-block d-lg-flex">
-                            <div class="col mt-2">                       
+                        <div class="row d-block d-lg-flex custom-input-container">
+                            <div class="col  custom-input-field-container">                       
                                 <input required ngModel name="username" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="username" placeholder="Name">
-                                <div class="alert alert-danger custom-error-message" *ngIf="!name.valid && name.touched">
-                                    Name is required
+                                <div class="alert alert-danger " ngClass="custom-error-message" *ngIf="!name.valid && name.touched">
+                                    required
                                   </div>
                             </div>
-                            <div class="col mt-2">                       
+                            <span class="col-1"></span>
+                            <div class="col  custom-input-field-container">                       
                                 <input required ngModel name="phone" #phone="ngModel" type="text" class="form-control custom-input" id="phone" placeholder="Phone No.">
-                                <div class="alert alert-danger custom-error-message" *ngIf="!phone.valid && phone.touched">
-                                    Phone is required
+                                <div class="alert alert-danger " ngClass="custom-error-message" *ngIf="!phone.valid && phone.touched">
+                                    required
                                   </div>
                             </div>
                         </div>
-                        <div class="mt-2 row">
-                            <div class="col">                       
+                        <div class="mt-2 row custom-input-container">
+                            <div class="col custom-input-field-container">                       
                                 <input required ngModel name="email" #email="ngModel" type="text" class="form-control custom-input" id="email" placeholder="Email">
                                 <div class="alert alert-danger custom-error-message" *ngIf="!email.valid && email.touched">
-                                    Email is required
+                                    required
                                   </div>
                             </div>
                         </div>
                         
-                        <div class="row mt-3">
-                            <p class="ml-3">I am a</p>
-                            <mat-radio-group ngModel name="userType" aria-label="Select an option" class="d-block d-lg-flex">
+                        <div class=" row mt-3">
+                            <p>I am a</p>
+                            <mat-radio-group ngModel name="userType" aria-label="Select an option" class="d-flex">
                                 <mat-radio-button value="student">Student</mat-radio-button>
                                 <mat-radio-button value="educator">Educator</mat-radio-button>
                                 <mat-radio-button value="institution">Institution</mat-radio-button>
                             </mat-radio-group>
                         </div>
                     </div>
-                    <div>
+                    <div class="ml-n4">
                       <button mat-button class="notify-button" (click)="openDialog()" [disabled]="!f.valid">Notify Me</button>
                     </div>
                 </form>   

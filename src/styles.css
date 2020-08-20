@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: url('./assets/images/background.png') no-repeat; background-size: contain; }
+body { margin: 0; background: url('./assets/images/background.png') no-repeat; background-size: contain; }
 
 .custom-modal .mat-dialog-content{
     height: 5vh;
@@ -9,4 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background:
 .custom-modal{
     height: 20vh;
     text-align: center;
+}
+*{
+    font-family: 'Montserrat' !important;
 }
