@@ -1,9 +1,21 @@
+@media only screen and (max-width:600px){
+  .card-container{
+    min-width: 100vw;
+    max-height: 100vh;
+    box-shadow: gray 0px 0px 20px 10px;
+    height: 100%;
+    width: 100vw;
+    overflow: scroll;
+  }
+  .logo{
+    margin-left: -20vw;
+  }
+}
 .card-container{
     max-width: 75vw;
     box-shadow: gray 0px 0px 20px 10px;
     height: auto;
     width: auto;
-    display: flex;
   }
   .heading{
     font-weight: 900;
@@ -15,25 +27,20 @@
   outline: gray;
   padding-left: 0.75em;
   height: 4vh;
+  font-size: 0.75rem ;
+  width: 100%;
 }
-.message-box{
-  display: inline;
-}
+
 .logo{
-  height: 8vh;
-  width: 8vw;
+  height: 6rem;
+  width: 8rem;
 }
 .header-image{
   height: 100%;
   width: 100%;
 }
 .header-image-container{
-  display: flex;
-  align-items: center;
-  flex: 1;
-}
-.main-content{
-  flex: 1;
+  margin: auto;
 }
 .mat-radio-button {
   margin-left: 5%;
@@ -68,7 +75,7 @@
 .custom-error-message{
   height: 5vh;
   padding: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   text-align: center;
   border-radius: 10px 10px 100% 100%;
 }
