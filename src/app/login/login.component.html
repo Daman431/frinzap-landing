@@ -42,26 +42,20 @@
                 <form #f="ngForm" (ngSubmit)="formData(f); f.resetForm()">
                     <div class="form-group">
                         <div class="row d-block d-lg-flex custom-input-container">
-                            <div class="col  custom-input-field-container">                       
-                                <input required ngModel name="username" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="username" placeholder="Name">
-                                <div class="alert alert-danger " ngClass="custom-error-message" *ngIf="!name.valid && name.touched">
-                                    required
-                                  </div>
+                            <div class="col  custom-input-field-container d-flex">                       
+                                <input [class.error-outline]="!name.valid && name.touched" required ngModel name="username" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="username" placeholder="Name">
+                                <span style="color: red; font-size: large;">*</span>
                             </div>
                             <span class="col-1"></span>
-                            <div class="col  custom-input-field-container">                       
+                            <div class="col  custom-input-field-container d-flex">                       
                                 <input required ngModel name="phone" #phone="ngModel" type="text" class="form-control custom-input" id="phone" placeholder="Phone No.">
-                                <div class="alert alert-danger " ngClass="custom-error-message" *ngIf="!phone.valid && phone.touched">
-                                    required
-                                  </div>
+                                <span style="font-size:large;">*</span>
                             </div>
                         </div>
                         <div class="mt-2 row custom-input-container">
-                            <div class="col custom-input-field-container">                       
-                                <input required ngModel name="email" #email="ngModel" type="text" class="form-control custom-input" id="email" placeholder="Email">
-                                <div class="alert alert-danger custom-error-message" *ngIf="!email.valid && email.touched">
-                                    required
-                                  </div>
+                            <div class="col custom-input-field-container d-flex">                       
+                                <input required [class.error-outline]="!email.valid && email.touched" ngModel name="email" #email="ngModel" type="text" class="form-control custom-input" id="email" placeholder="Email">
+                                <span style="color: red; font-size: large;">*</span>
                             </div>
                         </div>
                         
