@@ -121,3 +121,8 @@
   height: 35%;
   width: 35%;
 }
+.sub-heading-container{
+  font-weight: 900;
+  font-size: medium;
+  font-style: bold;
+}
