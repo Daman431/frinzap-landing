@@ -15,7 +15,7 @@ export class notifyDialog {}
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private url="https:/192.241.131.118:5009/frinzap/invite";
+  private url="https://192.241.131.118:5009/frinzap/invite";
   public counterDetails = {
     days:0,
     hoursLeft:0,
