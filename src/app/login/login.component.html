@@ -43,13 +43,12 @@
                     <div class="form-group">
                         <div class="row d-block d-lg-flex custom-input-container">
                             <div class="col  custom-input-field-container d-flex">                       
-                                <input [class.error-outline]="!name.valid && name.touched" required ngModel name="username" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="username" placeholder="Name">
+                                <input [class.error-outline]="!name.valid && name.touched" required ngModel name="name" #name="ngModel" (change)="log(name);" type="text" class="form-control custom-input" id="name" placeholder="Name">
                                 <span style="color: red; font-size: large;">*</span>
                             </div>
                             <span class="col-1"></span>
                             <div class="col  custom-input-field-container d-flex">                       
-                                <input required ngModel name="phone" #phone="ngModel" type="text" class="form-control custom-input" id="phone" placeholder="Phone No.">
-                                <span style="font-size:large;">*</span>
+                                <input ngModel name="phone" #phone="ngModel" type="text" class="form-control custom-input" id="phone" placeholder="Phone No." style="width: 95%;">
                             </div>
                         </div>
                         <div class="mt-2 row custom-input-container">
@@ -61,7 +60,7 @@
                         
                         <div class=" row mt-3">
                             <p>I am a</p>
-                            <mat-radio-group ngModel name="userType" aria-label="Select an option" class="d-flex">
+                            <mat-radio-group required ngModel name="userType" aria-label="Select an option" class="d-flex">
                                 <mat-radio-button value="student">Student</mat-radio-button>
                                 <mat-radio-button value="educator">Educator</mat-radio-button>
                                 <mat-radio-button value="institution">Institution</mat-radio-button>
