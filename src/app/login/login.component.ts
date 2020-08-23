@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'notify-dialog',
@@ -15,7 +15,8 @@ export class notifyDialog {}
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private url="https://192.241.131.118:5009/frinzap/invite";
+  private url="http://192.241.131.118:5009/frinzap/invite";
+  private headers = new HttpHeaders();
   public counterDetails = {
     days:0,
     hoursLeft:0,
@@ -26,8 +27,11 @@ export class LoginComponent implements OnInit {
 
   formData(formObject){
 
+    this.headers = this.headers.set('Content-Type','application/json');
     let userDetails = formObject.form.value;
-    this.http.post(this.url,JSON.stringify(userDetails))
+    
+
+    this.http.post(this.url,JSON.stringify(userDetails),{headers:this.headers})
       .subscribe(response => {
         console.log("Data posted");
       })
